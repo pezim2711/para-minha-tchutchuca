@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>para meu xuxu</title>
+    <style>
+        body {
+
+            background-color: red;
+
+        }
+
+        .painel {
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 600px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        #sim {
+
+            height: 60px;
+            width: 90px;
+            background-color: red;
+            border: 2px solid white;
+            color: white;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-left: -80px;
+
+
+
+        }
+
+        #nao {
+            position: absolute;
+            height: 60px;
+            width: 70px;
+            background-color: red;
+            border: 2px solid white;
+            color: white;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-left: 10px;
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="painel">
+
+        <h1>você me ama?</h1>
+        <p></p>
+        <img src="gatinho romantico.jpeg" alt="">
+        <p></p>
+        <a
+            href="https://www.tiktok.com/@ugtmesoso/video/7354509215777524998?q=eu%20nasci%20pra%20ser%20o%20seu%20grudinho&t=1723751054860">
+            <button id="sim">sim meu amor!</button></a>
+        <button onclick="fuja()" id="nao"> não </button>
+
+
+
+    </div>
+
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+</body>
+
+</html>
